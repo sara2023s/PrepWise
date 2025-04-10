@@ -1,10 +1,8 @@
-import React from 'react'
 import Agent from "@/components/agent";
-import { getCurrentUser } from '@/lib/actions/auth.action';
+import {getCurrentUser} from "@/lib/actions/auth.action";
 
 const Page = async () => {
-
-  const user = await getCurrentUser();
+    const user = await getCurrentUser();
 
     return (
         <>

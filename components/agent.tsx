@@ -1,10 +1,10 @@
 'use client';
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import {cn} from "@/lib/utils";
-import { vapi } from "@/lib/vapi.sdk";
+import {useRouter} from "next/navigation";
+import {useEffect, useState} from "react";
+import { vapi } from '@/lib/vapi.sdk';
 
 enum CallStatus {
     INACTIVE = 'INACTIVE',
@@ -14,7 +14,7 @@ enum CallStatus {
 }
 
 interface SavedMessage {
-    role: 'user' | 'system' |'assistant';
+    role: 'user' | 'system' | 'assistant';
     content: string;
 }
 
@@ -22,7 +22,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
     const router = useRouter();
     const [isSpeaking, setIsSpeaking] = useState(false);
     const [callStatus, setCallStatus] = useState<CallStatus>(CallStatus.INACTIVE);
-    const [messages, setMessages ] = useState<SavedMessage[]>([]);
+    const [messages, setMessages] = useState<SavedMessage[]>([]);
 
     useEffect(() => {
         const onCallStart = () => setCallStatus(CallStatus.ACTIVE);
@@ -38,6 +38,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
 
         const onSpeechStart = () => setIsSpeaking(true);
         const onSpeechEnd = () => setIsSpeaking(false);
+
         const onError = (error: Error) => console.log('Error', error);
 
         vapi.on('call-start', onCallStart);
@@ -53,14 +54,13 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
             vapi.off('message', onMessage);
             vapi.off('speech-start', onSpeechStart);
             vapi.off('speech-end', onSpeechEnd);
-            vapi.off('error', onError);
+            vapi.off('error', onError)
         }
-
     }, [])
 
     useEffect(() => {
-        if (callStatus === CallStatus.FINISHED) router.push('/');
-    }, [messages, callStatus, type, userId, router]);
+        if(callStatus === CallStatus.FINISHED) router.push('/');
+    }, [messages, callStatus, type, userId]);
 
     const handleCall = async () => {
         setCallStatus(CallStatus.CONNECTING);
@@ -70,8 +70,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
                 username: userName,
                 userid: userId,
             }
-        } )
-
+        })
     }
 
     const handleDisconnect = async () => {
@@ -81,12 +80,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
     }
 
     const latestMessage = messages[messages.length - 1]?.content;
-
     const isCallInactiveOrFinished = callStatus === CallStatus.INACTIVE || callStatus === CallStatus.FINISHED;
-
-
-
-
 
     return (
         <>
