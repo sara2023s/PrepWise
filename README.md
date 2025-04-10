@@ -1,0 +1,2 @@
+# PrepWise
+AI Interview helper
