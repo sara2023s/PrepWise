@@ -1,18 +1,18 @@
-
 import { initializeApp, getApp, getApps } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA2IBfcG1WD-zQ1hZDXOa-_mt9W8c0QOJ0",
-    authDomain: "prepwise-4287a.firebaseapp.com",
-    projectId: "prepwise-4287a",
-    storageBucket: "prepwise-4287a.firebasestorage.app",
-    messagingSenderId: "718591450179",
-    appId: "1:718591450179:web:829d057d79dcd3a761c8f6",
-    measurementId: "G-RHTQ8XQHR5"
+  apiKey: "AIzaSyALkEE4xidiEJAx9TZwapJaHgoofvWY6-U",
+  authDomain: "prep-wise-interview.firebaseapp.com",
+  projectId: "prep-wise-interview",
+  storageBucket: "prep-wise-interview.firebasestorage.app",
+  messagingSenderId: "543016891552",
+  appId: "1:543016891552:web:33aa757acc351f9c5945c5",
+  measurementId: "G-HEWQBSCSPC"
 };
 
+// Initialize Firebase
 const app = !getApps.length ? initializeApp(firebaseConfig) : getApp();
 
 export const auth = getAuth(app);
