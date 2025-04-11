@@ -8,7 +8,7 @@ import {getCurrentUser, getInterviewsByUserId, getLatestInterviews} from "@/lib/
 
 const Page = async () => {
     const user = await getCurrentUser();
-    
+
     const [userInterviews, latestInterviews] = await Promise.all([
         await getInterviewsByUserId(user?.id!),
         await getLatestInterviews({ userId: user?.id! })
@@ -55,7 +55,7 @@ const Page = async () => {
                         latestInterviews?.map((interview) => (
                             <InterviewCard {...interview} key={interview.id}/>
                         ))) : (
-                            <p>There are no new interviews availible</p>
+                        <p>There are no new interviews available</p>
                     )}
                 </div>
             </section>
