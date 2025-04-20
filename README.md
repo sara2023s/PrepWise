@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🤖 PrepWise – AI Interview Helper
+An AI-powered interview preparation platform that simulates realistic job interview questions and tracks your progress.
 
-## Getting Started
+🌐 Live Site: [interview-helper.buildwithsds.com](https://interview-helper.buildwithsds.com/)
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📌 Project Overview
+```txt
+Built to help users prepare for job interviews using AI-generated questions.  
+Provides a sleek sign-up/login flow, intelligent question prompts, and a responsive dashboard.  
+Created as a full-stack project with authentication and error monitoring.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Tech Stack
+```js
+Front-End:  React • Tailwind CSS  
+Back-End:   Node.js • Express  
+Auth:       Firebase Authentication  
+AI:         OpenAI API  
+Platform:   Vercel • Sentry (Error Monitoring)
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
+- Email/password login with protected routes
+- AI-generated interview questions across domains
+- Personalized dashboard and progress logic
+- Error tracking via Sentry
+- Fast + responsive interface (mobile-first design)    
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🚀 Setup & Run Locally
+git clone https://github.com/buildwithsds/prepwise.git       
+cd lux-fitness           
+npm install      
+npm run dev       
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 What I Built & Learned
+- Real-world authentication and route protection
+- How to use OpenAI’s API effectively for dynamic prompts
+- Handling UI/UX logic for input validation and feedback
+- Error logging + monitoring for debugging in production    
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🙋‍♂️ Author
+Sara da Silva      
+buildwithsds.com | [LinkedIn](http://linkedin.com/in/sara-n-a-dasilva) | [GitHub](https://github.com/sara2023s)
